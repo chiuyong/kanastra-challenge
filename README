@@ -1,0 +1,177 @@
+### Kanastra Challenge - README
+
+# Kanastra Challenge - Debt Management System
+
+## Overview
+
+This project is a solution for the Kanastra hiring challenge, aiming to create a debt management system. The solution includes both frontend and backend components to handle file uploads, process CSV files, generate invoices, and send billing emails.
+
+## Table of Contents
+
+- [Project Structure](#project-structure)
+- [Frontend](#frontend)
+- [Backend](#backend)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Docker](#docker)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Project Structure
+
+The project is organized as follows:
+
+```
+kanastra-challenge/
+├── .git/
+├── src/
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── FileUploader.tsx
+│   │   │   ├── file.tsx
+│   │   │   ├── index.ts
+│   │   │   ├── no-match.tsx
+│   │   │   ├── table.tsx
+│   │   │   └── __tests__/
+│   │   │       └── FileUploader.test.tsx
+│   │   ├── index.ts
+│   ├── context/
+│   │   └── FileContext.tsx
+│   ├── hooks/
+│   │   ├── useFileContext.ts
+│   │   ├── useResetError.ts
+│   │   ├── useUploadFile.ts
+│   │   └── useFetchFiles.ts
+│   ├── layouts/
+│   │   └── Layout.tsx
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── pages/
+│   │   ├── UploadPage.tsx
+│   │   ├── FileListPage.tsx
+│   │   └── __tests__/
+│   │       ├── UploadPage.test.tsx
+│   │       └── FileListPage.test.tsx
+│   ├── reducers/
+│   │   └── fileReducer.ts
+│   ├── services/
+│   │   └── fileService.ts
+│   ├── types/
+│   │   ├── file.ts
+│   │   └── index.ts
+│   ├── global.css
+│   ├── main.tsx
+│   ├── vite-env.d.ts
+│   └── App.tsx
+├── bun.lockb
+├── components.json
+├── index.html
+├── jest.config.ts
+├── jest-setup.ts
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
+
+## Frontend
+
+The frontend is built using React and includes:
+
+- **File Uploader**: Component to upload CSV files.
+- **File List Page**: Displays a list of uploaded files.
+- **Context API**: Manages global state for file uploads.
+- **Hooks**: Custom hooks for file context, uploading, and fetching files.
+- **Reducers**: Manages state transitions for file operations.
+- **Testing**: Unit tests for components and pages using Jest.
+
+### Key Components
+
+- `FileUploader.tsx`: Component for uploading files.
+- `FileListPage.tsx`: Displays the list of uploaded files.
+- `FileContext.tsx`: Context for managing file-related state.
+- `fileService.ts`: Service for handling file operations.
+
+## Backend
+
+The backend processes the uploaded CSV files, generates invoices, and sends billing emails. The backend is designed to handle large volumes of data efficiently, ensuring scalability and performance.
+
+### Key Services
+
+- **File Processing**: Parses and processes CSV files.
+- **Invoice Generation**: Creates invoices based on the processed data.
+- **Email Service**: Sends billing emails to the respective users.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- Docker
+- Docker Compose
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-repo/kanastra-challenge.git
+   cd kanastra-challenge
+   ```
+
+2. Install the dependencies:
+   ```
+   npm install
+   ```
+
+3. Configure environment variables as needed.
+
+## Usage
+
+### Running the Frontend
+
+To start the frontend development server:
+```
+npm run dev
+```
+
+### Running the Backend
+
+To start the backend server (assuming you have a separate backend setup):
+```
+pip install -r requirements.txt
+docker-compose up
+```
+
+## Testing
+
+To run unit and integration tests:
+```
+npm test
+```
+
+## Docker
+
+To run the project using Docker Compose:
+
+1. Build and start the containers:
+   ```
+   docker-compose up --build
+   ```
+
+2. Access the application at `http://localhost:8888`.
+
+## Contributing
+
+Contributions are welcome! Please create a pull request or submit an issue for any changes or enhancements.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+This README provides a comprehensive guide to understanding the project's structure, setup, and usage, ensuring a smooth development experience. If you have any questions or need further clarification, please feel free to reach out.
